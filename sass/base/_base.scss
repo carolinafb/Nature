@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /*para simplificar despues las cuentas de rem uso como base 10 px, recordar que rem convierte a px desde el root(html); 62,5% sale de 10px/16px*, tambien por eso lo dejo aca y no lo mando a tipografia*/
+}
+
+body {
+  box-sizing: border-box; /*agrega el margen y padding al alto y ancho del modelo de caja*/
+  padding: 3rem;
+}

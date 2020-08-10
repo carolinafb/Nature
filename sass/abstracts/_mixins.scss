@@ -1,0 +1,8 @@
+@mixin clearFix {
+  // Si un elemento es más alto que el elemento que lo contiene y flota, se desbordará fuera de su contenedor. Con esto, lo solucionamos.
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
