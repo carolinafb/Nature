@@ -23,13 +23,7 @@
   }
 
   &__text-box {
-    position: absolute; /*en relacion del padre mas cercano con propiedad position relative*/
-    top: 40%;
-    left: 50%;
-    transform: translate(
-      -50%,
-      -50%
-    ); /*para centrar el centro del texbox con el centro del padre*{en relacion de este elmento}*/
+    @include absCenter;
     text-align: center;
   }
 }
