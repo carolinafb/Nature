@@ -5,12 +5,27 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
   background-size: cover; /*Escala la imagen al mayor tamaño posible sin estirarla. Si las proporciones de la imagen difieren de las del elemento, es recortada vertical u horizontalmente para que no quede un espacio vacío.*/
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
   position: relative;
+
+  @media(min-resolution: 192dpi) and (min-width:600px), 
+        (min-width:2000px) {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  }
+
+  @include respond(phone){
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;
